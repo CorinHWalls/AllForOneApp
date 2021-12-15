@@ -2,20 +2,21 @@
 @import "~slick-carousel/slick/slick.css"; 
 @import "~slick-carousel/slick/slick-theme.css";
 
+/* Start -  For Dashboard - Carousel */
 .Dashboard {
-  width: 50%;
+  width: 75%;
   margin: 10rem auto;
   height: 570px;
 }
 
 .slide img {
-  width: 20rem;
+  width: 100%;
   margin: 0 auto;
 }
 
 .slide{
   transform: scale(0.2);
-  transition:  transfrom 300ms;
+  transition:  transfrom 500ms;
   opacity: .5
 }
 
@@ -25,7 +26,7 @@
 }
 
 .arrow {
-  background-color: #fff;
+  /* background-color: #fff; */
   position: absolute;
   cursor: pointer;
   z-index: 10;
@@ -48,5 +49,56 @@
   left: 0%;
   top: 50%;
 }
+/* End - For Dashboard - Carousel */
 
 
+/* Start - For Title page */
+.TitleScreen{
+  background-image: url(./assets/xbox360_2.jpg);
+ background-size: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+@media screen and (min-width:100px) {
+  .main-title{
+    width: 50%;
+  }
+
+}
+
+/* SayHello */
+
+.Name-gameBG{
+  background-image: url(./assets/NameBG.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+   width: 100vw;
+   height: 100vh;
+}
+
+.nameAvatar{
+  width:auto;
+  height: 400px
+}
+
+@keyframes blink {
+   from{
+       opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+     }
+}
+.type-writer::after{
+    content: "|";
+animation: blink 1s infinite;
+}
+.type-writer > span{
+}

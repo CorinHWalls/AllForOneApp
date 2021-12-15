@@ -3,7 +3,7 @@ import React from "react";
 ////////////Say Hello
 const handleSayHello = async (props) => {
   let enteredName = "";
-  await fetch("http://localhost:5038/SayHello", {
+  await fetch("https://cwallforoneapi.azurewebsites.net/SayHello", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -19,7 +19,7 @@ const handleSayHello = async (props) => {
 const handleAskingQuestions = async (props) => {
     let questionsData = "";
     
-    await fetch("http://localhost:5038/AskingQuestions", {
+    await fetch("https://cwallforoneapi.azurewebsites.net/AskingQuestions", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -36,7 +36,7 @@ const handleAskingQuestions = async (props) => {
 //////////Greater or Less
 const handleGreaterOrLess = async (props) => {
     let answer = "";
-     await fetch("http://localhost:5038/GreaterOrLess", {
+     await fetch("https://cwallforoneapi.azurewebsites.net/GreaterOrLess", {
          method: "POST",
          headers: {
              "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const handleGreaterOrLess = async (props) => {
 const handleOddEven = async (props) => {
     let answer = "";
 
-    await fetch("http://localhost:5038/OddEven", {
+    await fetch("https://cwallforoneapi.azurewebsites.net/OddEven", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -69,7 +69,7 @@ const handleOddEven = async (props) => {
 ////////Magic 8 Ball
 const handleMagic8Ball = async (props) => {
     let answer = "";
-    await fetch("http://localhost:5038/Magic8Ball", {
+    await fetch("https://cwallforoneapi.azurewebsites.net/Magic8Ball", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -82,7 +82,7 @@ const handleMagic8Ball = async (props) => {
 //////////Reverse it
 const handleReverseIt = async (props) => {
     let reversedString = "";
-    await fetch ("http://localhost:5038/ReverseIt", {
+    await fetch ("https://cwallforoneapi.azurewebsites.net/ReverseIt", {
         method: "POST",
         headers: {
             "Content-Type" : "application/json"
@@ -98,7 +98,7 @@ const handleReverseIt = async (props) => {
 const handleAddTwoNumbers = async (props) => {
     let results = "";
 
-    await fetch("http://localhost:5038/twonumbers", {
+    await fetch("https://cwallforoneapi.azurewebsites.net/twonumbers", {
         method: "POST",
         headers: {
             "Content-Type" : "application/json"
@@ -115,7 +115,7 @@ const handleAddTwoNumbers = async (props) => {
 const handleRestaurantPicker = async (props) => {
     let results = "";
 
-    await fetch("http://localhost:5038/RestaurantPicker", {
+    await fetch("https://cwallforoneapi.azurewebsites.net/restaurantpicker", {
         method: "POST",
         headers: {
             "Content-Type" : "application/json"
@@ -124,6 +124,46 @@ const handleRestaurantPicker = async (props) => {
     return results;
 }
 
+const handleCategoryPicker = async (props) => {
+    let results = "";
+    console.log(props.category);
+    await fetch("https://cwallforoneapi.azurewebsites.net/restaurantpicker/selection", {
+        method: "POST",
+        headers: {
+            "Content-Type" : "application/json"
+        },
+        body: JSON.stringify({
+            category: props.category
+        }),
+    }) .then(resp => resp.text()).then(data => results = data);
+    return results;
+
+}
+
+///Madlibs
+const handleMadlibs = async (props) => {
+    let results = "";
+
+    await fetch("http://localhost:5038/madlib", {
+        method: "POST",
+        headers: {
+            "Content-Type" : "application/json"
+        },
+        body: JSON.stringify({
+            "noun" : props.noun,
+            "noun2" : props.noun2,
+            "verb" : props.verb,
+            "noun3" : props.noun3,
+            "animal" : props.animal,
+            "bodypart" : props.bodyPart,
+            "adjective" : props.adjective,
+            "noun4" : props.noun4,
+            "funnyword" : props.funnyWord,
+            "name" : props.name 
+        }),
+    }) .then(resp => resp.text()) .then(data => results = data)
+    return results;
+}
 
 
-export { handleSayHello, handleAskingQuestions, handleGreaterOrLess, handleMagic8Ball, handleOddEven, handleReverseIt, handleAddTwoNumbers, handleRestaurantPicker };
+export { handleSayHello, handleAskingQuestions, handleGreaterOrLess, handleMagic8Ball, handleOddEven, handleReverseIt, handleAddTwoNumbers, handleRestaurantPicker, handleMadlibs, handleCategoryPicker };

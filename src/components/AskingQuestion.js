@@ -9,19 +9,16 @@ function AskingQuestion() {
     let [Answer, setAnswer] = useState("")
 
 
-    const getAnswers = async (e) => {
-
-       setAnswer(await handleAskingQuestions({
-        Name: Name,
-        Time: Time
-    })) 
-
-}
+ 
 
 const handleSubmit = async (e) => {
-        await getAnswers();
+    
+  let results =  await handleAskingQuestions({
+        Name: Name,
+        Time: Time
+    })
 
-        setQuestion(Answer);
+        setQuestion(results);
     }
 
     return (
