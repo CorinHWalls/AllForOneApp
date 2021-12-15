@@ -4,6 +4,7 @@ import { Container, Row, Col, Form } from "react-bootstrap";
 import TypeWriter from "./TypeWriter";
 import nameAvatar from "../assets/nameAvatar.png";
 import a_button from "../assets/a_Btn.png";
+import Navbar from "./Navbar"
 
 function SayHelloApp() {
   let [Name, setName] = useState("");
@@ -37,10 +38,11 @@ function SayHelloApp() {
 
   return (
     <>
+    <Navbar />
       <div className="Name-gameBG pt-5">
         <Container>
           <Row className="justify-content-md-center">
-            <Col xs lg="2" className="">
+            <Col xs lg="2" className=" pt-5">
               <img className="nameAvatar" src={nameAvatar} alt="" />
             </Col>
             <Col md="auto" >
@@ -61,8 +63,16 @@ function SayHelloApp() {
                 type="text" required
                 placeholder="Enter your name"
               />
-              <img clasName="a_btn" src={a_button} style={{display: button ? "none" : null}} onClick={handleSubmit} alt="" />
+        
               
+            </Col>
+
+
+          </Row>
+
+          <Row>
+            <Col className="d-flex justify-content-center pt-3">
+            <img className="a_btn floater" src={a_button} style={{display: button ? "none" : null}} onClick={handleSubmit} alt="" />
             </Col>
           </Row>
         </Container>
