@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 import { Container, Row, Col, Form } from "react-bootstrap";
 import {handleMagic8Ball} from "../Services/APIServices"
+import Navbar from "./Navbar";
+import TypeWriter from "./TypeWriter";
+import magic8Ball from "../assets/8ballAvatar.png"
 
 
 function Magic8Ball() {
@@ -13,11 +16,29 @@ function Magic8Ball() {
 
     return (
         <>
-        <h1>Magic 8 Ball</h1>
+        <Navbar appName="Magic 8 ball" />
+        <div className="magic8ball-bg">
+        <Container>
+            <Row>
+                <Col className="pt-5">
+                <h1>Ask a question then press my face</h1>
+                </Col>
+            </Row>
+            <Row className="justify-content-md-center">
+                <Col className="d-flex justify-content-center pt-5">
+                <img className="floater" onClick={get8Ball} src={magic8Ball} alt="" />
+                </Col>
+            </Row>
 
-        <h2>{Response}</h2>
-        <Form.Control type="text" placeholder="Type question here.." />
-        <button onClick={get8Ball}>Shake 8 Ball</button>
+            <Row>
+                <Col className="d-flex justify-content-md-center">
+        <h2>{Response}</h2>  
+                </Col>
+            </Row>
+        </Container>
+
+       
+        </div>
         </>
     )
 }

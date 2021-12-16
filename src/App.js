@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import Title from './components/Title';
 import Dashboard from './components/Dashboard';
 import SayHelloApp from './components/SayHelloApp';
 import AskingQuestion from './components/AskingQuestion';
@@ -13,7 +11,6 @@ import RestaurantPicker from './components/RestaurantPicker';
 import MadLibs from './components/MadLibs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Route, Routes } from "react-router-dom";
-import Navbar from './components/Navbar';
 
 
 

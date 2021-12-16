@@ -2,6 +2,18 @@
 @import "~slick-carousel/slick/slick.css"; 
 @import "~slick-carousel/slick/slick-theme.css";
 
+/* Navbar */
+
+.navLogo{
+  height: 20px;
+  height: 50px;
+}
+
+.navbar-dark .navbar-brand {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 2rem;
+}
+
 /* Start -  For Dashboard - Carousel */
 .Dashboard {
   width: 75%;
@@ -54,6 +66,7 @@
 
 /* Start - For Title page */
 .TitleScreen{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   background-image: url(./assets/xbox360_2.jpg);
  background-size: cover;
  background-position: center center;
@@ -74,6 +87,7 @@
 /* SayHello */
 
 .Name-gameBG{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   background-image: url(./assets/NameBG.png);
   background-size: cover;
   background-position: center center;
@@ -100,9 +114,113 @@
     content: "|";
 animation: blink 1s infinite;
 }
-.type-writer > span{
-}
+
 .a_btn{
   height: 50px;
   width: 50px;
+}
+
+/* Asking Questions */
+.questions-bg{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  background-image: url(./assets/questionsBg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+   width: 100vw;
+   height: 100vh;
+}
+
+.questionsAvatar{
+  width:auto;
+  height: 400px;
+}
+
+/* Greater or Less */
+
+.greaterLess-bg{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  background-image: url(./assets/GreaterLessbg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+   width: 100vw;
+   height: 100vh;
+}
+
+.greaterLessAvatar{
+  width:auto;
+  height: 400px;
+}
+
+/* Magic 8 Ball */
+
+.magic8ball-bg{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+   background-image: url(./assets/NameBG.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+   width: 100vw;
+   height: 100vh;
+}
+
+/* Odd or Even */
+
+.oddEven-bg{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  background-image: url(./assets/NameBG.png);
+ background-size: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Reverse It */
+
+.reverse-bg{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  background-image: url(./assets/NameBG.png);
+ background-size: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+  width: 100vw;
+  height: 100vh; 
+}
+
+.reverse-avatar{
+  width: auto;
+  height: 400px;
+}
+
+/* Adding Numbers */
+
+.addingNumbers-bg{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  background-image: url(./assets/NameBG.png);
+ background-size: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+  width: 100vw;
+  height: 100vh; 
+}
+
+/* Restaurant Picker */
+
+.restaurant-bg{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  background-image: url(./assets/NameBG.png);
+ background-size: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+  width: 100vw;
+  height: 100vh; 
 }
