@@ -17,8 +17,7 @@
 /* Start -  For Dashboard - Carousel */
 .Dashboard {
   width: 75%;
-  margin: 10rem auto;
-  height: 570px;
+  /* margin: 10rem auto; */
 }
 
 .slide img {
@@ -74,7 +73,7 @@
  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
-  
+  overflow-y: hidden;
 }
 
 @media screen and (min-width:100px) {
@@ -95,6 +94,7 @@
   background-attachment: fixed;
    width: 100vw;
    height: 100vh;
+   overflow-y: hidden;
 }
 
 .nameAvatar{
@@ -130,6 +130,9 @@ animation: blink 1s infinite;
   background-attachment: fixed;
    width: 100vw;
    height: 100vh;
+   overflow-y: hidden;
+   overflow-x: hidden;
+   overflow: hidden;
 }
 
 .questionsAvatar{
@@ -141,13 +144,14 @@ animation: blink 1s infinite;
 
 .greaterLess-bg{
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  background-image: url(./assets/GreaterLessbg.png);
+  background-image: url(./assets/NameBG.png);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
    width: 100vw;
    height: 100vh;
+   overflow-y: hidden;
 }
 
 .greaterLessAvatar{
@@ -166,32 +170,40 @@ animation: blink 1s infinite;
   background-attachment: fixed;
    width: 100vw;
    height: 100vh;
+   overflow-y: hidden;
 }
 
 /* Odd or Even */
 
 .oddEven-bg{
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  background-image: url(./assets/NameBG.png);
+  background-image: url(./assets/questionsBg.jpg);
  background-size: cover;
  background-position: center center;
  background-repeat: no-repeat;
  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
+  overflow-y: hidden;
+}
+
+.oddEvenAvatar{
+  width:auto;
+  height: 400px;
 }
 
 /* Reverse It */
 
 .reverse-bg{
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  background-image: url(./assets/NameBG.png);
+  background-image: url(./assets/questionsBg.jpg);
  background-size: cover;
  background-position: center center;
  background-repeat: no-repeat;
  background-attachment: fixed;
   width: 100vw;
   height: 100vh; 
+  overflow-y: hidden;
 }
 
 .reverse-avatar{
@@ -210,6 +222,7 @@ animation: blink 1s infinite;
  background-attachment: fixed;
   width: 100vw;
   height: 100vh; 
+  overflow-y: hidden;
 }
 
 /* Restaurant Picker */
@@ -223,4 +236,23 @@ animation: blink 1s infinite;
  background-attachment: fixed;
   width: 100vw;
   height: 100vh; 
+  overflow-y: hidden;
+}
+
+/* Madlib */
+
+.madlib-bg{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  background-image: url(./assets/questionsBg.jpg);
+ background-size: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+  width: 100vw;
+  height: 100vh; 
+  overflow-y: hidden;
+}
+
+.example::-webkit-scrollbar {
+  display: none;
 }

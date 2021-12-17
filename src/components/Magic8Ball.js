@@ -6,6 +6,7 @@ import TypeWriter from "./TypeWriter";
 import magic8Ball from "../assets/8ballAvatar.png"
 
 
+
 function Magic8Ball() {
 
     let [Response, setResponse] = useState("");

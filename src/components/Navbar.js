@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Navbar, Container, Modal, Button } from "react-bootstrap";
+import { Navbar, Container, Modal, Button, Row, Col } from "react-bootstrap";
 import logo from "../assets/xbox-logo.png";
 import GameSelection from "./GameSelection";
 import { Link } from "react-router-dom";
@@ -19,7 +19,13 @@ function Navigation(props) {
           </Navbar.Brand>
           <Navbar.Brand >
            
-            <img onClick={handleShow} className="navLogo wiggle" src={logo} alt="" />
+           <Row>
+             <Col>
+            <img onClick={handleShow} className="navLogo wiggle" src={logo} alt="home" /> 
+            <h4>Home</h4>
+             
+             </Col>
+           </Row>
          
           </Navbar.Brand>
        

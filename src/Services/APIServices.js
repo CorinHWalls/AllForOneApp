@@ -144,7 +144,7 @@ const handleCategoryPicker = async (props) => {
 const handleMadlibs = async (props) => {
     let results = "";
 
-    await fetch("http://localhost:5038/madlib", {
+    await fetch("https://cwallforoneapi.azurewebsites.net/madlib", {
         method: "POST",
         headers: {
             "Content-Type" : "application/json"
