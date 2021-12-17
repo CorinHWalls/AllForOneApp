@@ -5,10 +5,6 @@ import GameSelection from "./GameSelection";
 import { Link } from "react-router-dom";
 
 function Navigation(props) {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   return (
     <>
@@ -21,7 +17,9 @@ function Navigation(props) {
            
            <Row>
              <Col>
-            <img onClick={handleShow} className="navLogo wiggle" src={logo} alt="home" /> 
+             <Link to="/">
+            <img className="navLogo wiggle" src={logo} alt="home" /> 
+            </Link>
             <h4>Home</h4>
              
              </Col>
@@ -32,23 +30,6 @@ function Navigation(props) {
         </Container>
       </Navbar>
 
-      {/*/////////////////// Modal/////////////////////// */}
-      <Modal size="lg"  aria-labelledby="example-modal-sizes-title-lg" show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-lg">Go to Main Menu?</Modal.Title>
-        </Modal.Header>
-      
-        <Modal.Footer>
-          <Link to="/">
-          <Button variant="primary" onClick={handleClose}>
-            Yes
-          </Button>
-          </Link>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
     </>
   );
 }
